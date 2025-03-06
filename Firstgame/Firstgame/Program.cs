@@ -61,8 +61,10 @@ namespace Firstgame
                 }
                 if (continuePlaying)
                 {
-
+                  
                     Console.WriteLine($"Your current balance: {newPlayer.balance}");
+                    if (newPlayer.Lost() == true) { Console.WriteLine("player lost"); break;}
+                    else if (newPlayer.HasReachedWinCon() == true) { Console.WriteLine("congras, you won, time for you to go to a real casino"); break; }
                     Console.WriteLine("\nDo you want to play another game? (y/n): ");
                     userInput = Console.ReadLine().ToLower();
 

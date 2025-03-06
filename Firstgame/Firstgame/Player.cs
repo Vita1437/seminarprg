@@ -82,6 +82,7 @@ namespace Firstgame
         {
             return balance >= 21777;
         }
+
         public bool Lost()
         {
             return balance <= 0;
