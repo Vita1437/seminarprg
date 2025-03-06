@@ -16,7 +16,7 @@ namespace Firstgame
 
         public player(string name, int initialbalance = 777)
         {
-            name = name;
+            this.name = name;
             balance = initialbalance;
             hand = new List<Card>();
             currentlyPlaying = false;

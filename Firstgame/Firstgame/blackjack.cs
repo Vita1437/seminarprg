@@ -19,7 +19,7 @@ namespace Firstgame
             player = player1;
             dealerHand = new List<Card>();
         }
-        public void DealInitialCards()
+        public void DealCards()
         {
             player.ReceiveCard(deckOfCards.Draw());
             player.ReceiveCard(deckOfCards.Draw());
@@ -28,11 +28,12 @@ namespace Firstgame
         }
         public void ShowCards()
         {
-            player.Showhand();
+            player.Showhand(); 
             Console.WriteLine("Dealer's hand:");
             Console.WriteLine(dealerHand[0]);
             Console.WriteLine("[Hidden Card]");
         }
+
         public void PlayerHit()
         {
             player.ReceiveCard(deckOfCards.Draw());
@@ -75,12 +76,10 @@ namespace Firstgame
 
             return totalValue;
         }
-        public void DeterminewhoWon()
+        public void DetermineWhoWon(int stake)
         {
-            int playerHandValue = 0;
-            int dealerHandValue = 0;
-            playerHandValue = player.CalculatehandValueBlackjack();
-            dealerHandValue = CalculateHandValueBlackjack(dealerHand);
+            int playerHandValue = player.CalculatehandValueBlackjack();
+            int dealerHandValue = CalculateHandValueBlackjack(dealerHand);
 
             Console.WriteLine($"Player hand value: {playerHandValue}");
             Console.WriteLine($"Dealer hand value: {dealerHandValue}");
@@ -92,10 +91,12 @@ namespace Firstgame
             else if (dealerHandValue > 21)
             {
                 Console.WriteLine("Dealer busts");
+                player.gettingMoneyAfterAWin(stake * 2); 
             }
             else if (playerHandValue > dealerHandValue)
             {
                 Console.WriteLine("Player wins");
+                player.gettingMoneyAfterAWin(stake * 2);
             }
             else if (playerHandValue < dealerHandValue)
             {
@@ -103,9 +104,12 @@ namespace Firstgame
             }
             else
             {
-                Console.WriteLine("draw");
+                Console.WriteLine("It's a draw");
+                player.gettingMoneyAfterAWin(stake);
             }
         }
+
+
 
         public bool PlaceBet(int amount)
         {
