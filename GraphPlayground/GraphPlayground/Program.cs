@@ -15,9 +15,9 @@ namespace GraphPlayground
         public static void DFS(Graph graph, Node startNode, Node targetNode = null)
         {
             Node currentNode = null;
-            List<Node> stack = new List<Node>() { startNode};
+            List<Node> stack = new List<Node>() { startNode };
             Console.WriteLine("starting node:" + startNode.index);
-            while (stack.Count > 0) 
+            while (stack.Count > 0)
             {
                 currentNode = stack[0];
                 Console.WriteLine("current node:" + startNode.index);
@@ -38,19 +38,36 @@ namespace GraphPlayground
                 }
             }
         }
-
+        public static void DFSrec(Node currentNode)
+        {
+            Console.WriteLine("current node: " + currentNode.index);
+            currentNode.visited = true;
+            foreach (Node neighbor in currentNode.neighbors)
+            {
+                if (!neighbor.visited)
+                {
+                    Console.WriteLine("going into node " + neighbor.index);
+                    DFSrec(neighbor);
+                }
+                else
+                {
+                    Console.WriteLine("neighbor: " + neighbor.index + "already visited");
+                }
+            }
+            Console.Write("\n");
+        }
         public static void BFS(Graph graph, Node startNode, Node targetNode = null)
         {
             Node currentNode = null;
             List<Node> queue = new List<Node>();
             queue.Add(startNode);
             Console.WriteLine("starting node:" + startNode.index);
-            while(queue.Count > 0)
+            while (queue.Count > 0)
             {
                 currentNode = queue[0];
                 Console.WriteLine("current node:" + startNode.index);
                 queue.RemoveAt(0);
-                foreach(Node neighbor in currentNode.neighbors)
+                foreach (Node neighbor in currentNode.neighbors)
                 {
                     if (!neighbor.visited)
                     {
@@ -63,7 +80,7 @@ namespace GraphPlayground
                     {
                         Console.WriteLine("Adding neighbor: " + neighbor.index + " to queue");
                     }
-                    
+
                 }
             }
             Console.WriteLine();
@@ -79,7 +96,8 @@ namespace GraphPlayground
 
             //Call both algorithms with a random starting node
             Random rng = new Random();
-            DFS(graph, graph.nodes[rng.Next(0, graph.nodes.Count)]);
+            DFSrec(graph.nodes[rng.Next(0, graph.nodes.Count)]);
+            //DFS(graph, graph.nodes[rng.Next(0, graph.nodes.Count)]);
             //BFS(graph, graph.nodes[rng.Next(0, graph.nodes.Count)]);
 
             Console.ReadKey();
