@@ -13,14 +13,16 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         Random rng = new Random();
+        Graphics panelGraphics;
         public Form1()
         {
             InitializeComponent();
+            panelGraphics = panel1.CreateGraphics();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -28,20 +30,6 @@ namespace WindowsFormsApp1
 
         }
 
-        /*private void button1_Click(object sender, EventArgs e)
-        {
-            dividing.Text = "clicked";
-            int timesClicked = 1;
-            int num1 = rng.Next(0,20);
-            
-            if (num1 == 0)
-            {
-                dividing.Size = new Size(dividing.Width - 10, dividing.Height -10);
-                dividing.Visible = false;
-            }
-            else { dividing.Size = new Size(dividing.Width + 10, dividing.Height + 10); dividing.Visible = true; dividing.Text = "clicked " + timesClicked + " times";}
-            
-        }*/
         
 
 
@@ -138,9 +126,39 @@ namespace WindowsFormsApp1
             textBox1.Text += " x ";
         }
 
-        private void dividing_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             textBox1.Text += " ÷ ";
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void panel1_mousedown_Paint(object sender, PaintEventArgs e)
+        {
+             
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            panelGraphics.FillEllipse(Brushes.Red, 0, 0, 100, 100);
+
+            int timesClicked = 1;
+            int num1 = rng.Next(0, 20);
+
+            if (num1 == 0)
+            {
+                Size = new Size(button1.Width - 10, button1.Height - 10);
+                button1.Visible = false;
+            }
+            else { button1.Size = new Size(button1.Width + 10, button1.Height + 10); button1.Visible = true; button1.Text = "clicked " + timesClicked + " times"; }
         }
     }
 }
