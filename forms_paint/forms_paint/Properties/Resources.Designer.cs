@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UkolForms.Properties {
+namespace forms_paint.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace UkolForms.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("UkolForms.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("forms_paint.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -123,9 +123,9 @@ namespace UkolForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bucket {
+        internal static System.Drawing.Bitmap brushSign {
             get {
-                object obj = ResourceManager.GetObject("bucket", resourceCulture);
+                object obj = ResourceManager.GetObject("brushSign", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +173,26 @@ namespace UkolForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap filledElipseSign {
+            get {
+                object obj = ResourceManager.GetObject("filledElipseSign", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap filledRectangleSign {
+            get {
+                object obj = ResourceManager.GetObject("filledRectangleSign", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);
@@ -183,9 +203,9 @@ namespace UkolForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap images1 {
+        internal static System.Drawing.Bitmap light_brown_color_solid_background_1920x1080 {
             get {
-                object obj = ResourceManager.GetObject("images1", resourceCulture);
+                object obj = ResourceManager.GetObject("light-brown-color-solid-background-1920x1080", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +213,19 @@ namespace UkolForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap light_brown_color_solid_background_1920x1080 {
+        internal static System.Drawing.Bitmap lineSign {
             get {
-                object obj = ResourceManager.GetObject("light-brown-color-solid-background-1920x1080", resourceCulture);
+                object obj = ResourceManager.GetObject("lineSign", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paint_brush_icon_symbol_flat_illustration_for_graphic_and_web_design_free_vector {
+            get {
+                object obj = ResourceManager.GetObject("paint-brush-icon-symbol-flat-illustration-for-graphic-and-web-design-free-vector", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +253,9 @@ namespace UkolForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rotatesign {
+        internal static System.Drawing.Bitmap rubberSign {
             get {
-                object obj = ResourceManager.GetObject("rotatesign", resourceCulture);
+                object obj = ResourceManager.GetObject("rubberSign", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +263,9 @@ namespace UkolForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rubberSign {
+        internal static System.Drawing.Bitmap texture {
             get {
-                object obj = ResourceManager.GetObject("rubberSign", resourceCulture);
+                object obj = ResourceManager.GetObject("texture", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

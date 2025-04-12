@@ -1,13 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D931D371-A7F3-4C1E-BA45-3A58998E4FE7}</ProjectGuid>
+    <ProjectGuid>{CD3628E0-A3A8-4893-A82D-C5DAF9D14D1B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>UkolForms</RootNamespace>
-    <AssemblyName>UkolForms</AssemblyName>
+    <RootNamespace>forms_paint</RootNamespace>
+    <AssemblyName>forms_paint</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -60,11 +60,17 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -75,10 +81,73 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Black.png" />
+    <None Include="Resources\images.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="yellow.png" />
+    <None Include="Resources\pft401.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F78523_1200x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_303401956_ufTeSp9EX62zQnJnbed9Q0kEgqaKKL44.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_331785873_kGJgDPmF7YEHRAwPsF3LdGeqjoAuULK4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crystal-Absolute-White.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light-brown-color-solid-background-1920x1080.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chocolate-brown-color_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5531ab8e057b2a649f748d341dcd41df.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_423788551_FBeHBMSNAl9h9bVpfTjUPqpvf54binzo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rubberSign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reactangleSign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elipseSign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paint-brush-icon-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lineSign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brushSign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filledElipseSign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filledRectangleSign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\texture1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
