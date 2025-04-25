@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UkolForms.Properties
+namespace forms_paint.Properties
 {
 
 
